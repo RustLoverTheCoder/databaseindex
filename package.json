@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^1.0.2",
+    "daisyui": "^2.19.0",
     "solid-js": "^1.4.7"
   }
 }
