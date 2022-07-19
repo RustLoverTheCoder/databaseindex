@@ -6,12 +6,21 @@ import classNames from '../utils/classNames.js'
 
 
 const IndexPage: Component = () => {
-    const [tabActive, setTabActive] = createSignal<string>('db')
+    const [tabActive, setTabActive] = createSignal<string>('db1')
     const tab = [{
-        key: 'db',
+        key: 'db1',
         icon: <Database class='w-4 h-4 flex-shrink-0'/>,
     }, {
-        key: 'tool',
+        key: 'db2',
+        icon: <Database class='w-4 h-4 flex-shrink-0'/>,
+    }, {
+        key: 'db3',
+        icon: <Database class='w-4 h-4 flex-shrink-0'/>,
+    }, {
+        key: 'db4',
+        icon: <Database class='w-4 h-4 flex-shrink-0'/>,
+    }, {
+        key: 'db5',
         icon: <Database class='w-4 h-4 flex-shrink-0'/>,
     }]
     return (
@@ -25,7 +34,7 @@ const IndexPage: Component = () => {
                                     return (
                                         <div
                                             onClick={() => setTabActive(item.key)}
-                                            class={classNames(tabActive() === item.key ? ' tab-active' : '', 'h-12 w-12 flex justify-center items-center cursor-pointer tab tab-bordered  border-b-0 border-l-4')}>
+                                            class={classNames(tabActive() === item.key ? ' tab-active bg-gray-100' : '', 'h-12 w-12 flex justify-center items-center cursor-pointer tab tab-bordered  border-b-0 border-l-4')}>
                                             {item.icon}
                                         </div>
                                     )

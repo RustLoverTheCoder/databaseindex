@@ -10,6 +10,7 @@ import Support from "../components/icons/Support";
 import {Link} from "solid-app-router";
 import LightningBolt from "../components/icons/LightningBolt";
 import StatusOnline from "../components/icons/StatusOnline";
+import Plus from "../components/icons/plus";
 
 const Layouts: Component<{ children: JSX.Element }> = ({children}) => {
     return (
@@ -24,6 +25,11 @@ const Layouts: Component<{ children: JSX.Element }> = ({children}) => {
                     <div class="tooltip tooltip-bottom" data-tip="搜索">
                         <button class='btn btn-square btn-sm btn-ghost'>
                             <Search class='w-4 h-4'/>
+                        </button>
+                    </div>
+                    <div class="tooltip tooltip-bottom" data-tip="新增数据库">
+                        <button class='btn btn-square btn-sm btn-ghost'>
+                            <Plus class='w-4 h-4'/>
                         </button>
                     </div>
                     <div class="tooltip tooltip-bottom" data-tip="主题">
@@ -74,14 +80,14 @@ const Layouts: Component<{ children: JSX.Element }> = ({children}) => {
                     </div>
                 </div>
                 <div class='flex'>
-                    <div class="tooltip tooltip-top" data-tip="支持">
-                        <button class='btn btn-sm btn-ghost hover:bg-transparent'>
-                            <Support class='w-4 h-4'/>
-                        </button>
-                    </div>
                     <div class="tooltip tooltip-top" data-tip="快捷方式">
                         <button class='btn btn-sm btn-ghost hover:bg-transparent'>
                             <LightningBolt class='w-4 h-4'/>
+                        </button>
+                    </div>
+                    <div class="tooltip tooltip-top" data-tip="支持">
+                        <button class='btn btn-sm btn-ghost hover:bg-transparent'>
+                            <Support class='w-4 h-4'/>
                         </button>
                     </div>
                 </div>
