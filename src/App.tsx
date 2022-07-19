@@ -1,11 +1,8 @@
 import type {Component} from 'solid-js';
+import RouterApp from './router'
 
 const App: Component = () => {
-    return (
-        <div>
-            <button class='btn'>123</button>
-        </div>
-    )
+    return <RouterApp/>
 };
 
 export default App;

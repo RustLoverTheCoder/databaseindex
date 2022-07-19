@@ -59,8 +59,7 @@
         "height": 600,
         "resizable": true,
         "title": "Database Index",
-        "width": 800,
-        "theme": "Dark"
+        "width": 800
       }
     ]
   }
