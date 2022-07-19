@@ -3,6 +3,7 @@ import Layouts from "../layouts";
 import {Link} from 'solid-app-router'
 import Database from "../components/icons/Database";
 import classNames from '../utils/classNames.js'
+import DotsVertical from "../components/icons/DotsVertical";
 
 
 const IndexPage: Component = () => {
@@ -46,7 +47,13 @@ const IndexPage: Component = () => {
                 <div class='h-full flex-1'>
 
                 </div>
-                <div class='h-full w-1/4 bg-red-50'></div>
+
+                <div class='h-full w-1 flex justify-center items-center bg-gray-100 cursor-col-resize overflow-hidden'>
+                    <DotsVertical class='w-3 h-3 flex-shrink-0 text-gray-400'/>
+                </div>
+                <div class='h-full w-1/4'>
+
+                </div>
             </div>
         </Layouts>
     )
