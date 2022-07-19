@@ -7,15 +7,18 @@ import Cloud from '../components/icons/Cloud'
 import {JSX} from "solid-js/types/jsx";
 import ExclamationCircle from "../components/icons/ExclamationCircle";
 import Support from "../components/icons/Support";
+import {Link} from "solid-app-router";
+import LightningBolt from "../components/icons/LightningBolt";
+import StatusOnline from "../components/icons/StatusOnline";
 
 const Layouts: Component<{ children: JSX.Element }> = ({children}) => {
     return (
         <div class='w-full h-full flex flex-col overflow-hidden'>
-            <header class='w-full h-12 flex items-center justify-between px-2 py-2'>
+            <header class='w-full h-12 flex items-center justify-between px-2 py-2 border-b'>
                 <div class='inline-flex items-center space-x-2'>
-                    <button class='btn btn-sm btn-ghost hover:bg-transparent'>
+                    <Link href='/' class='btn btn-sm btn-ghost hover:bg-transparent'>
                         DATABASE-INDEX
-                    </button>
+                    </Link>
                 </div>
                 <div class='inline-flex items-center space-x-2'>
                     <div class="tooltip tooltip-bottom" data-tip="搜索">
@@ -44,6 +47,11 @@ const Layouts: Component<{ children: JSX.Element }> = ({children}) => {
                             <Setting class='w-4 h-4'/>
                         </button>
                     </div>
+                    <div class="tooltip tooltip-bottom" data-tip="智能模式">
+                        <button class='btn btn-square btn-sm btn-ghost'>
+                            <StatusOnline class='w-4 h-4'/>
+                        </button>
+                    </div>
                     <button class='btn btn-sm'>
                         登录
                     </button>
@@ -52,7 +60,7 @@ const Layouts: Component<{ children: JSX.Element }> = ({children}) => {
             <div class='flex-1 flex'>
                 {children}
             </div>
-            <div class='w-full h-8 flex justify-between'>
+            <div class='w-full h-8 flex justify-between border-t'>
                 <div class='flex'>
                     <div class="tooltip tooltip-top" data-tip="云更新">
                         <button class='btn btn-sm btn-ghost hover:bg-transparent'>
@@ -69,6 +77,11 @@ const Layouts: Component<{ children: JSX.Element }> = ({children}) => {
                     <div class="tooltip tooltip-top" data-tip="支持">
                         <button class='btn btn-sm btn-ghost hover:bg-transparent'>
                             <Support class='w-4 h-4'/>
+                        </button>
+                    </div>
+                    <div class="tooltip tooltip-top" data-tip="快捷方式">
+                        <button class='btn btn-sm btn-ghost hover:bg-transparent'>
+                            <LightningBolt class='w-4 h-4'/>
                         </button>
                     </div>
                 </div>
