@@ -6,3 +6,7 @@ html, body, #root {
     @apply w-full;
     @apply h-full;
 }
+
+.hideScrollBar::-webkit-scrollbar {
+    width: 0;
+}

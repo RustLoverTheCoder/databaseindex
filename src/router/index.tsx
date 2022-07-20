@@ -1,12 +1,17 @@
-import {Routes, Route} from "solid-app-router"
+import {Routes, useRoutes} from "solid-app-router"
 import {lazy} from 'solid-js'
 
-const Home = lazy(() => import("../pages/index"))
+const routes = [
+    {
+        path: "/",
+        component: lazy(() => import("../layouts/index")),
+        children: [
+            {path: "/", component: lazy(() => import("../pages/index"))},
+        ]
+    },
+]
 
 export default function App() {
-    return <>
-        <Routes>
-            <Route path="/" component={Home}/>
-        </Routes>
-    </>
+    const Routes = useRoutes(routes);
+    return <Routes/>
 }
