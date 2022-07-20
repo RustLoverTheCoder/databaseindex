@@ -4,12 +4,12 @@ import Moon from "../components/icons/Moon";
 import Sun from "../components/icons/Sun";
 import Setting from "../components/icons/Setting";
 import Cloud from '../components/icons/Cloud'
-import {JSX} from "solid-js/types/jsx";
 import ExclamationCircle from "../components/icons/ExclamationCircle";
 import Support from "../components/icons/Support";
 import {Link} from "solid-app-router";
 import LightningBolt from "../components/icons/LightningBolt";
 import StatusOnline from "../components/icons/StatusOnline";
+import StatusOffline from "../components/icons/StatusOffline";
 import Plus from "../components/icons/plus";
 import {dbList} from '../stores'
 import classNames from "../utils/classNames";
@@ -61,10 +61,18 @@ const Layouts: Component = () => {
                             <Setting class='w-4 h-4'/>
                         </button>
                     </div>
+
                     <div class="tooltip tooltip-bottom" data-tip="智能模式">
-                        <button class='btn btn-square btn-sm btn-ghost'>
-                            <StatusOnline class='w-4 h-4'/>
-                        </button>
+                        <label class='swap btn btn-square btn-sm btn-ghost'>
+                            <input type="checkbox" onChange={(e: Event) => {
+                                const checked = (e.target as HTMLInputElement).checked
+                                if (!!checked) {
+                                } else {
+                                }
+                            }}/>
+                            <StatusOnline class='w-4 h-4 swap-on'/>
+                            <StatusOffline class='w-4 h-4 swap-off'/>
+                        </label>
                     </div>
                     <button class='btn btn-sm'>
                         登录
