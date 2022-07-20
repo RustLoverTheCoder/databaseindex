@@ -10,3 +10,10 @@ html, body, #root {
 .hideScrollBar::-webkit-scrollbar {
     width: 0;
 }
+
+.table-mini :where(th, td) {
+    padding: 0.2rem 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+    @apply text-xs;
+}
