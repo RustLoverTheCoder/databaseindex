@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@tanstack/solid-table': ^8.3.0
   '@tauri-apps/api': ^1.0.2
   '@tauri-apps/cli': ^1.0.4
   autoprefixer: ^10.4.7
@@ -14,6 +15,7 @@ specifiers:
   vite-plugin-solid: ^2.3.0
 
 dependencies:
+  '@tanstack/solid-table': 8.3.0_solid-js@1.4.7
   '@tauri-apps/api': 1.0.2
   daisyui: 2.19.0_a191cbaa25c4a0a9f05cc78eac153be7
   solid-app-router: 0.4.1_solid-js@1.4.7
@@ -392,6 +394,21 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+
+  /@tanstack/solid-table/8.3.0_solid-js@1.4.7:
+    resolution: {integrity: sha512-4em7FRcz1XN5pcKalmtTmQypNMBkTCy6kJG+kdUOYlK2iw9F5cDdsxw0XoYrW5rYQ6PmbjF0LegV6T4KDUBRGQ==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      solid-js: ^1.3.13
+    dependencies:
+      '@tanstack/table-core': 8.3.0
+      solid-js: 1.4.7
+    dev: false
+
+  /@tanstack/table-core/8.3.0:
+    resolution: {integrity: sha512-xcspAAv+GN+WMrX6qaFrPxBVYxlFfyu4qddiTwXOaTQOLdgLP/3GbipDoL7gC2l3Iz9KFCDXWjhW79xta3w5rg==}
+    engines: {node: '>=12'}
+    dev: false
 
   /@tauri-apps/api/1.0.2:
     resolution: {integrity: sha512-yuNW0oeJ1/ZA7wNF1KgxhHrSu5viPVzY/UgUczzN5ptLM8dH15Juy5rEGkoHfeXGju90Y/l22hi3BtIrp/za+w==}

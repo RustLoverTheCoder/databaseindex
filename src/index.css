@@ -16,4 +16,14 @@ html, body, #root {
     line-height: 1.4;
     font-weight: 500;
     @apply text-xs;
+    max-width: 300px;
+    @apply truncate;
+    @apply hover:bg-accent;
+}
+
+.table:where(:not(.table-zebra)) :where(thead,tbody,tfoot) :where(:where(th,td)) {
+    border-bottom-width: 1px;
+    --tw-border-opacity: 1;
+    border-right-width: 1px;
+    border-color: hsl(var(--b2, var(--b1))/var(--tw-border-opacity));
 }
