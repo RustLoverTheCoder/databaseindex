@@ -27,3 +27,34 @@ html, body, #root {
     border-right-width: 1px;
     border-color: hsl(var(--b2, var(--b1))/var(--tw-border-opacity));
 }
+
+
+[contenteditable="true"].single-line {
+    white-space: nowrap;
+    overflow: hidden;
+    outline-width: 0px;
+}
+
+[contenteditable="true"].single-line br {
+    display: none;
+
+}
+
+[contenteditable="true"].single-line * {
+    display: inline;
+    white-space: nowrap;
+}
+
+input {
+    outline: none;
+    border-color: transparent;
+}
+
+input:hover :focus {
+    outline: none;
+    border-color: transparent;
+}
+
+input:focus:focus-visible {
+    outline: 0;
+}
