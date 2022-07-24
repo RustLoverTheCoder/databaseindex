@@ -20,7 +20,7 @@ const Layouts: Component = () => {
     const navigate = useNavigate()
     return (
         <div class='w-full h-full flex flex-col overflow-hidden'>
-            <header class='w-full h-12 flex items-center justify-between px-2 py-2 border-b z-20'>
+            <header class='w-full h-12 flex items-center justify-between px-2 py-2 border-b z-20'  data-tauri-drag-region>
                 <div class='inline-flex items-center space-x-2'>
                     <Link href='/' class='btn btn-sm btn-ghost'>
                         DATABASE-INDEX

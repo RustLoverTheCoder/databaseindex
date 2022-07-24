@@ -5,6 +5,8 @@
 html, body, #root {
     @apply w-full;
     @apply h-full;
+    @apply rounded-lg;
+    @apply overflow-hidden;
 }
 
 .hideScrollBar::-webkit-scrollbar {

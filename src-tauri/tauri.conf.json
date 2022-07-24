@@ -61,8 +61,11 @@
         "title": "Database Index",
         "width": 1250,
         "minWidth": 700,
-        "minHeight": 500
+        "minHeight": 500,
+        "decorations": false,
+        "transparent": true
       }
-    ]
+    ],
+    "macOSPrivateApi": true
   }
 }
