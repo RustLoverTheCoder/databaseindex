@@ -1,4 +1,5 @@
-import { Component, createSignal, Match, Switch } from 'solid-js'
+import { Component, createSignal, Match, Switch, onMount } from 'solid-js'
+import { window } from "@tauri-apps/api";
 import DotsVertical from '../components/icons/DotsVertical'
 import Time from '../components/icons/Time'
 import Folder from '../components/icons/Folder'
@@ -10,6 +11,12 @@ import Trash from '../components/icons/Trash'
 
 const IndexPage: Component = () => {
   const [active, setActive] = createSignal('time')
+
+  onMount(() => {
+    const win = window.getCurrent();
+    win.show();
+  })
+
   return (
     <>
       <div class='h-full flex-1 relative'>
@@ -39,7 +46,7 @@ const IndexPage: Component = () => {
               <div class='flex items-center border-b'>
                 <div class='flex flex-1 p-4 py-2 bg-transparent h-8'>
                   <input type='text' placeholder='搜索' autocomplete='off'
-                         class='flex-1 text-xs outline-0' />
+                    class='flex-1 text-xs outline-0' />
                 </div>
                 <button class='btn btn-sm btn-ghost btn-square hover:bg-transparent'>
                   <Trash class='w-4 h-4' />

@@ -62,8 +62,7 @@
         "width": 1250,
         "minWidth": 700,
         "minHeight": 500,
-        "decorations": false,
-        "transparent": true
+        "visible": false
       }
     ],
     "macOSPrivateApi": true
